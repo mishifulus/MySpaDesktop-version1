@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.mySpa.gui.PrincipalController">
+   <children>
+      <JFXTabPane layoutX="419.0" layoutY="188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Principal">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="677.0">
+                     <children>
+                        <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="666.0" prefWidth="1003.0" style="-fx-background-color: BFF5CE;">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="265.0" layoutY="118.0" prefHeight="175.0" prefWidth="434.0" text="Bienvenido a My Spa" textAlignment="CENTER" textFill="#2bbc7d" wrapText="true">
+                                 <font>
+                                    <Font name="Book Antiqua" size="58.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="194.0" fitWidth="240.0" layoutX="366.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+               </content></Tab>
+            <Tab text="Cliente">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <fx:include fx:id="moduloCliente" source="ClientesWindow.fxml" />
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Empleado">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <fx:include fx:id="moduloEmpleado" source="EmpleadosWindow.fxml" />
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Producto">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <fx:include fx:id="moduloProducto" source="ProductosWindow.fxml" />
+                </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Sala">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <fx:include fx:id="moduloSala" source="SalasWindow.fxml" />
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Sucursal">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <fx:include fx:id="moduloSucursal" source="SucursalesWindow.fxml" />
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Tratamiento">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <fx:include fx:id="moduloTratamiento" source="TratamientosWindow.fxml" />
+                </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+         <effect>
+            <Reflection topOpacity="0.49">
+               <input>
+                  <ColorAdjust />
+               </input>
+            </Reflection>
+         </effect>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.mySpa.gui.ModuloSalaController">
+    <children>
+      <Label contentDisplay="CENTER" layoutX="82.0" layoutY="9.0" prefHeight="46.0" prefWidth="123.0" text="Salas" textAlignment="CENTER" textFill="#1d9157" AnchorPane.leftAnchor="82.0">
+         <font>
+            <Font name="Century Gothic" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCodigo" focusColor="#b9daf9" labelFloat="true" layoutX="83.0" layoutY="70.0" prefHeight="37.0" prefWidth="140.0" promptText="Código" unFocusColor="#1d9157" AnchorPane.leftAnchor="83.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtNombre" focusColor="#b9daf9" labelFloat="true" layoutX="254.0" layoutY="70.0" prefHeight="37.0" prefWidth="406.0" promptText="Nombre" unFocusColor="#1d9157" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="340.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDescripcion" focusColor="#b9daf9" labelFloat="true" layoutX="82.0" layoutY="137.0" prefHeight="37.0" prefWidth="577.0" promptText="Descripción" unFocusColor="#1d9157" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="341.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtRutaFoto" focusColor="#b9daf9" labelFloat="true" layoutX="201.0" layoutY="197.0" prefHeight="37.0" prefWidth="199.0" promptText="Ruta de la foto" unFocusColor="#1d9157" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="600.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnGuardar" layoutX="840.0" layoutY="100.0" onAction="#guardarSala" prefHeight="37.0" prefWidth="130.0" text="Guardar" textAlignment="CENTER" AnchorPane.rightAnchor="30.0">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-success" />
+         </styleClass>
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnModificar" layoutX="840.0" layoutY="150.0" onAction="#modificarSala" prefHeight="37.0" prefWidth="130.0" text="Modificar" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-info" />
+         </styleClass></JFXButton>
+      <JFXTextField fx:id="txtEstatus" focusColor="#b9daf9" layoutX="82.0" layoutY="198.0" prefHeight="37.0" prefWidth="98.0" promptText="Estatus" unFocusColor="#1d9157" AnchorPane.leftAnchor="82.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBuscar" focusColor="#b9daf9" labelFloat="true" layoutX="650.0" layoutY="20.0" prefHeight="37.0" prefWidth="245.0" promptText="Búsqueda" unFocusColor="#1d9157" AnchorPane.leftAnchor="650.0" AnchorPane.rightAnchor="105.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnBuscar" layoutX="892.0" layoutY="20.0" onAction="#buscarSala" prefHeight="28.0" prefWidth="67.0" text="🔎" textAlignment="CENTER" AnchorPane.rightAnchor="45.0">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-info" />
+         </styleClass>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <ImageView fx:id="imgFoto" fitHeight="130.0" fitWidth="200.0" layoutX="677.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="149.48187255859375">
+         <image>
+            <Image url="@../resources/predeterminado.jpg" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cmbSucursal" focusColor="#b9daf9" labelFloat="true" layoutX="462.0" layoutY="208.0" prefHeight="25.0" prefWidth="157.0" unFocusColor="#1d9157" visibleRowCount="20" AnchorPane.rightAnchor="339.0" />
+      <JFXButton fx:id="btnVerActivos" layoutX="348.0" layoutY="19.0" onAction="#cargarActivos" prefHeight="39.0" prefWidth="130.0" text="Ver Activos" AnchorPane.leftAnchor="348.0">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-primary" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btnVerInactivos" layoutX="490.0" layoutY="19.0" onAction="#cargarInactivos" prefHeight="39.0" prefWidth="130.0" text="Ver Inactivos" AnchorPane.leftAnchor="490.0">
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-primary" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btnCargarFoto" layoutX="708.0" layoutY="216.0" prefHeight="37.0" prefWidth="130.0" text="Cargar Foto" AnchorPane.rightAnchor="162.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-success" />
+         </styleClass>
+      </JFXButton>
+      <TableView fx:id="tblDetalleSala" layoutX="10.0" layoutY="272.0" onMouseClicked="#seleccionarSala" prefHeight="423.0" prefWidth="978.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="272.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="colNombre" prefWidth="156.3333282470703" text="Nombre" />
+            <TableColumn fx:id="colDescripcion" prefWidth="388.66668701171875" text="Descripcion" />
+            <TableColumn fx:id="colRutaFoto" prefWidth="146.33331298828125" text="Ruta Foto" />
+            <TableColumn fx:id="colSucursal" prefWidth="134.111083984375" text="Sucursal" />
+            <TableColumn fx:id="colEstatus" minWidth="0.0" prefWidth="76.1112060546875" text="Estatus" />
+        </columns>
+      </TableView>
+      <Label layoutX="433.0" layoutY="204.0" text="Sucursal">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnEliminar" layoutX="840.0" layoutY="197.0" onAction="#eliminarSala" prefHeight="37.0" prefWidth="130.0" text="Eliminar">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-danger" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</AnchorPane>

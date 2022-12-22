@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.utl.mySpa.gui.ModuloEmpleadoController">
+    <children>
+        <Label layoutX="42.0" layoutY="33.0" prefHeight="46.0" prefWidth="371.0" text="Empleados" textFill="#1d9157" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font name="Century Gothic" size="36.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblEmpleados" layoutX="29.0" layoutY="364.0" onMouseClicked="#seleccionarEmpleado" prefHeight="263.0" prefWidth="947.0" AnchorPane.bottomAnchor="73.0">
+            <columns>
+                <TableColumn fx:id="colIdEmpleado" prefWidth="26.66668701171875" text="Cod" />
+                <TableColumn fx:id="colNombreCompleto" prefWidth="274.0" text="Nombre Completo" />
+                <TableColumn fx:id="colSexo" minWidth="0.0" prefWidth="37.0" text="Sexo" />
+                <TableColumn fx:id="colRFC" minWidth="0.0" prefWidth="110.66665649414062" text="RFC" />
+                <TableColumn fx:id="colTelefono" minWidth="0.0" prefWidth="99.66668701171875" text="Telefono" />
+                <TableColumn fx:id="colDomicilio" minWidth="0.0" prefWidth="227.33334350585938" text="Dirección" />
+                <TableColumn fx:id="colPuesto" minWidth="0.0" prefWidth="97.6666259765625" text="Puesto" />
+                <TableColumn fx:id="colEstatus" minWidth="0.0" prefWidth="81.3333740234375" text="Estatus" />
+            </columns>
+            </TableView>
+                <JFXTextField fx:id="txtNombre" focusColor="#b9daf9" layoutX="48.0" layoutY="96.0" prefHeight="37.0" prefWidth="220.0" promptText="Nombre" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtApellidoP" focusColor="#b9daf9" layoutX="275.0" layoutY="97.0" prefHeight="37.0" prefWidth="220.0" promptText="Apellido Paterno" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtApellidoM" focusColor="#b9daf9" layoutX="526.0" layoutY="96.0" prefHeight="37.0" prefWidth="220.0" promptText="Apellido Materno" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <Label alignment="CENTER" layoutX="528.0" layoutY="165.0" prefHeight="27.0" prefWidth="46.0" text="Sexo">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtRFC" focusColor="#b9daf9" layoutX="51.0" layoutY="157.0" prefHeight="37.0" prefWidth="220.0" promptText="RFC" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtTelefono" focusColor="#b9daf9" layoutX="276.0" layoutY="157.0" prefHeight="37.0" prefWidth="220.0" promptText="Telefono" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtDomicilio" focusColor="#b9daf9" layoutX="48.0" layoutY="212.0" prefHeight="37.0" prefWidth="449.0" promptText="Domicilio" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXPasswordField fx:id="txtPassword" focusColor="#b9daf9" layoutX="276.0" layoutY="274.0" prefHeight="37.0" prefWidth="220.0" promptText="Contraseña" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXPasswordField>
+                <JFXComboBox fx:id="cmbGenero" focusColor="#b9daf9" layoutX="587.0" layoutY="166.0" prefHeight="29.0" prefWidth="159.0" unFocusColor="#1d9157" />
+                <JFXButton fx:id="btnEliminar" layoutX="868.0" layoutY="317.0" onAction="#eliminarEmpleado" text="Eliminar" textAlignment="CENTER">
+                    <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-danger" />
+                    </styleClass>
+                    <font>
+                        <Font name="Century Gothic" size="20.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnGuardar" layoutX="580.0" layoutY="317.0" onAction="#guardarEmpleado" text="Guardar" textAlignment="CENTER">
+                    <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-success" />
+                    </styleClass>
+                    <font>
+                        <Font name="Century Gothic" size="20.0" />
+                    </font>
+                </JFXButton>
+                <JFXTextField fx:id="txtUsuario" focusColor="#b9daf9" layoutX="48.0" layoutY="274.0" prefHeight="37.0" prefWidth="220.0" promptText="Usuario" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtBuscar" focusColor="#b9daf9" labelFloat="true" layoutX="734.0" layoutY="37.0" prefHeight="25.0" prefWidth="179.0" promptText="Búsqueda" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXButton fx:id="btnBuscar" layoutX="910.0" layoutY="34.0" onAction="#buscarEmpleado" prefHeight="28.0" prefWidth="67.0" text="🔎" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic" size="18.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-info" />
+                    </styleClass>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </JFXButton>
+                <JFXButton fx:id="btnModificar" layoutX="721.0" layoutY="317.0" onAction="#modificarEmpleado" text="Modificar" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic" size="20.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-info" />
+                    </styleClass>
+                </JFXButton>
+                <JFXTextField fx:id="txtEstatus" editable="false" focusColor="#b9daf9" layoutX="528.0" layoutY="271.0" prefHeight="37.0" prefWidth="220.0" promptText="Estatus" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtPuesto" focusColor="#b9daf9" layoutX="526.0" layoutY="212.0" prefHeight="37.0" prefWidth="220.0" promptText="Puesto" unFocusColor="#1d9157">
+                    <font>
+                        <Font name="Times New Roman" size="20.0" />
+                    </font>
+                </JFXTextField>
+      <JFXTextField fx:id="txtRutaFoto" focusColor="#b9daf9" layoutX="758.0" layoutY="272.0" prefHeight="37.0" prefWidth="220.0" promptText="Ruta de Foto" unFocusColor="#1d9157">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="txtIdEmpleado" layoutX="51.0" layoutY="55.0" prefHeight="39.0" prefWidth="13.0" visible="false">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgEmpleado" fitHeight="89.0" fitWidth="142.0" layoutX="779.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/empleado.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnCargar" layoutX="859.0" layoutY="175.0" text="🡳 Cargar" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-success" />
+         </styleClass>
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnVerInactivos" layoutX="386.0" layoutY="26.0" onAction="#verInactivos" prefHeight="39.0" prefWidth="131.0" text="Ver Inactivos" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-primary" />
+         </styleClass>
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnVerActivos" layoutX="536.0" layoutY="26.0" onAction="#cargarTablaEmpleado" prefHeight="39.0" prefWidth="131.0" text="Ver Activos" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-primary" />
+         </styleClass>
+         <font>
+            <Font name="Century Gothic" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtNumEmpleado" focusColor="#b9daf9" layoutX="758.0" layoutY="97.0" prefHeight="37.0" prefWidth="220.0" promptText="Número" unFocusColor="#1d9157">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="txtIdPersona" layoutX="61.0" layoutY="65.0" prefHeight="39.0" prefWidth="13.0" visible="false">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtIdUsuario" layoutX="103.0" layoutY="62.0" prefHeight="39.0" prefWidth="13.0" visible="false">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+            </children>
+</AnchorPane>
